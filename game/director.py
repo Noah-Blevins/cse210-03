@@ -13,8 +13,9 @@
 #     
 #     __init__ will create instances of all other classes
 #     start_game() will contain all other non-init methods
-#     get_inputs() will run Guess.get_guess()
-#     do_updates() runs all update methods in parachute and guess, including an exit if the
+#     _get_inputs() will run Guess.get_guess()
+#     _do_updates() runs all update methods in parachute and guess, including an exit if the
 #       parachute is fully gone or the word is fully guessed
-#     give_outputs() prints the parachute and the current word state
+#     _give_outputs() prints the parachute and the current word state
 #       We also want something extra to signal the game has ended, but this can be in start_game()      
+#       We will use Encapsulation throughout
