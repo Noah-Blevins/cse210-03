@@ -19,3 +19,28 @@
 #     _give_outputs() prints the parachute and the current word state
 #       We also want something extra to signal the game has ended, but this can be in start_game()      
 #       We will use Encapsulation throughout
+
+from game.guess import Guess
+from game.parachute import Parachute
+from game.words import Words
+
+
+class Director: 
+
+    def __init__(self):
+        self._guess = Guess()
+        self._parachute = Parachute()
+        self._words = Words()
+        
+    def start_game(self):
+        while self._is_playing:
+            self._get_inputs()
+            self._do_updates()
+            self._give_outputs()
+
+    def _get_inputs(self):
+        pass
+    def _do_updates(self):
+        pass
+    def _do_outputs(self):
+        pass

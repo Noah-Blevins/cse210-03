@@ -9,3 +9,13 @@
 # If internal, populate during __init__
 
 # get_word() will return a word from the list
+
+
+import random
+class Words:
+    
+    def __init__(self):
+        pass
+
+    def get_word(self):
+        pass

@@ -13,3 +13,18 @@
 # user_guess() takes the letter the user guessed and will edit the list[] accordingly
 # user_guess() will also return a bool based on if the letter was in the word
 # check_word() returns True if the word is completely guessed
+
+class Guess:
+
+    def __init__(self, word):
+        self.word = []
+
+    def get_Guess(self):
+        pass
+
+    def user_guess(self):
+        pass
+
+    def check_word(self):
+        pass
+
