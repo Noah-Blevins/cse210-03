@@ -22,4 +22,9 @@ o	If game is over according to Guess() or Parachute(), end the gameplay loop in 
 o	Import Director() to Main and start the gameplay loop of Director.start_game()
 •	Class and method comments throughout
 
-Testing branch capability
+See each class for further details
+
+Kade: Director.start_game() and Words()
+Eric: Parachute()
+Ashton: Director() main three methods
+Noah: Guess()
