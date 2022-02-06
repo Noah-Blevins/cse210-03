@@ -44,15 +44,20 @@ class Guess:
         self._letter = ''
         
     #Gets the guess, and returns a string that contains all blanks and guessed letters.
-    def get_Guess(self):
+    def get_guess(self):
         self._guessString = ''.join(self._guess)
         return self._guessString
 
-    #This function is called for two reasons: one, to guess a letter, and two, to return a bool for if the letter is in there
+    #The following function is called for two reasons:
+    #One, to guess a letter, and two, to return a bool for if the letter is in there
     #Example: object is called var, word is APPLE, and assume Director has a bool is_correct.
     #Usage would then be: is_correct = var.user_guess(letter)
     #If letter == 'A' (not case-sensitive), is_correct = True
-    #Otherwise, if letter == 'z', is_correct = False
+    #Additionally, self._guess would replace the first item with 'A'.
+    #Calling get_guess would then return A____ if it's the first correct guess, or perhaps A__L_ if L was guessed first.
+    #Note that guessing a letter with multiples is taken into account, with a guess of 'p' instead giving us _PP__.
+    #Otherwise, if letter == 'z', is_correct = False, and the guess list would not be modified.
+    
     def user_guess(self, letter):
         self._letter = letter.upper()
         for i in range(len(self._guess)):
