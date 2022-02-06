@@ -17,14 +17,36 @@
 class Guess:
 
     def __init__(self, word):
-        self.word = []
+        self._word = word.upper()
+        self._guess = []
+        for i in range(len(word)):
+            self._guess.append('_')
+        self._guessString = ''
+        self._index = 0
+        self._letter = ''
 
     def get_Guess(self):
-        pass
+        self._guessString = ''.join(self._guess)
+        return self._guessString
 
-    def user_guess(self):
-        pass
+    def user_guess(self, letter):
+        self._letter = letter.upper()
+        for i in range(len(self._guess)):
+            self._index = self._word.find(self._letter, self._index)
+            if self._index == -1:
+                break
+            if self._letter in self._word:
+                self._guess[self._index] = self._letter
+            self._index += 1
+        self._index = 0
+        if self._letter in self._guess:
+            return True
+        else:
+            return False
 
     def check_word(self):
-        pass
+        if ('_' in self._guess):
+            return False
+        else:
+            return True
 
