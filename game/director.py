@@ -28,19 +28,48 @@ from game.words import Words
 class Director: 
 
     def __init__(self):
-        self._guess = Guess()
-        self._parachute = Parachute()
         self._words = Words()
+        self._guess = Guess(self._words)
+        self._parachute = Parachute()
+        self._is_playing = True
+        self._first_play = True
+        self.winning = False
+        self.losing = False
+        self._new_letter = " "
         
     def start_game(self):
         while self._is_playing:
+            while self._first_play: 
+                self._give_outputs()
+                self._first_play = False
             self._get_inputs()
             self._do_updates()
             self._give_outputs()
+            
 
     def _get_inputs(self):
-        pass
+        self._new_letter = input("Guess a letter [a-z]:")
+        
     def _do_updates(self):
-        pass
-    def _do_outputs(self):
-        pass
+        self._parachute.break_parachute(self._guess.user_guess(self._new_letter))
+        self.winning = self._guess.check_word()
+        self.losing = self._parachute.parachute_broken()
+        
+    def _give_outputs(self):
+        word = self._guess.get_guess()
+        self._parachute.draw_parachute()
+        print(f"{word}")
+
+        if self.winning:
+            self._is_playing = False
+            print("You guessed it! Play again soon!")
+
+        else:
+            self._is_playing = True
+
+        if self.losing:
+            self._is_playing = False
+            print("Im afraid you lost your parachute! Better luck next time.")
+
+        else:
+            self._is_playing = True
