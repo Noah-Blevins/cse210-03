@@ -15,8 +15,10 @@ import random
 class Words:
     
     def __init__(self):
-        self.word_list = ["power", "laptop", "vehicle", "tophat", "moter", "robot", "soccer", "cheese", "gameboy", "sword", "slasher",
+        # This init will populate a list wide variety of words between 5 and 7 letters long for the use of the get word method.
+        self._word_list = ["power", "laptop", "vehicle", "tophat", "moter", "robot", "soccer", "cheese", "gameboy", "sword", "slasher",
          "flower", "havoc", "seabear", "sponge", "circle", "square", "catfish", "tissue", "words"]
 
     def get_word(self,):
-        return random(self.word_list)
+        # get_word simply returns a random word from word_list
+        return random(self._word_list)
