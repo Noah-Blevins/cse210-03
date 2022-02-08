@@ -20,9 +20,9 @@
 #       We also want something extra to signal the game has ended, but this can be in start_game()      
 #       We will use Encapsulation throughout
 
-from guess import Guess
-from parachute import Parachute
-from words import Words
+from game.guess import Guess
+from game.parachute import Parachute
+from game.words import Words
 
 
 class Director: 
@@ -38,8 +38,6 @@ class Director:
         self.winning = False
         self.losing = False
         self._new_letter = " "
-        # New line below
-        self._word = self._words.get_word()
         
     def start_game(self):
         while self._is_playing:
