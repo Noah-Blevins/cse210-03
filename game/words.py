@@ -15,7 +15,8 @@ import random
 class Words:
     
     def __init__(self):
-        pass
+        self.word_list = ["power", "laptop", "vehicle", "tophat", "moter", "robot", "soccer", "cheese", "gameboy", "sword", "slasher",
+         "flower", "havoc", "seabear", "sponge", "circle", "square", "catfish", "tissue", "words"]
 
-    def get_word(self):
-        pass
+    def get_word(self,):
+        return random(self.word_list)
