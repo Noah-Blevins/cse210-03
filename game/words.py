@@ -21,4 +21,4 @@ class Words:
 
     def get_word(self,):
         # get_word simply returns a random word from word_list
-        return random(self._word_list)
+        return random.choice(self._word_list)
