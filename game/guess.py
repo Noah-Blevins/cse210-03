@@ -27,8 +27,8 @@
     Note that neither the word that initializes the class nor the letters guessed are case-sensitive.
     Take that, user error!
     
-    Well, I can only partly throw user error out. If the user enters more than one letter, the program breaks.
-    Maybe we can implement something in Director that stops the user from entering a guess that's too long?"""
+    The class itself is incapable of handling more than one letter guessesd at a time, or an accidental
+    press of 'enter' before the guess is finished. However, the input has been cleansed in Director()."""
 
 #The Guess() Class should have an instance created like so: var = Guess(word)
 
