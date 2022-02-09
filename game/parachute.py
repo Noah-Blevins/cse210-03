@@ -17,18 +17,16 @@ class Parachute:
     def __init__(self):
         self._parachute = ['  _____', ' /_____\ ', ' \     /', '  \   /', '    0', '   /|\ ', '   / \ ',' ^^^^^^^^']
         
-
     def break_parachute(self, value):
         if value == False:
             del self._parachute[0]
-        
 
     def draw_parachute(self):
         for i in self._parachute:
             part = i
             print(part)
-        
 
     def parachute_broken(self):
-        return self._parachute == ['    0', '   /|\ ', '   / \ ',' ^^^^^^^^']
-        
+        if self._parachute == ['    0', '   /|\ ', '   / \ ',' ^^^^^^^^']:
+            self._parachute[0] = '    x' 
+            return self._parachute
