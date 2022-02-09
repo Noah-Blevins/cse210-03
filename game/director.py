@@ -50,7 +50,12 @@ class Director:
             
 
     def _get_inputs(self):
-        self._new_letter = input("Guess a letter [a-z]:")
+        guess = input("Guess a letter [a-z]:")
+        while guess.isalpha() != True or len(guess) != 1:
+            guess = input("You entered an invalid letter. Please guess a single letter [a-z]:")
+                
+        self._new_letter = guess
+
         
     def _do_updates(self):
         self._parachute.break_parachute(self._guess.user_guess(self._new_letter))
