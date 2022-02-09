@@ -20,6 +20,18 @@
 #       We also want something extra to signal the game has ended, but this can be in start_game()      
 #       We will use Encapsulation throughout
 
+"""Director() class
+    Author: Ashton Pieterse
+    Team 02
+    CSE210.10
+    
+    This class connects all other classes in order for the game to operate. It uses encapsulation throughout. 
+    The start_game function runs the game. It calls the get_input, do_updates and give_outputs.
+    Get_inputs asks the user to provide an input. It will keep asking unless a user provides a valid input(single letter, no spaces or characters).
+    Do_updates checks if the input is in the word(via guess). If it is not then a part of the parachute is removed(parachute).
+    Give_outputs prints the blank words and correct guessed words, as well as draws the parachute. 
+    """
+
 from game.guess import Guess
 from game.parachute import Parachute
 from game.words import Words
