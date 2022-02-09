@@ -15,7 +15,7 @@
 class Parachute:
 
     def __init__(self):
-        self._parachute = ['  _____', ' /_____\ ', ' \     /', '  \   /', '    0', '   /|\ ', '   / \ ',' ^^^^^^^^']
+        self._parachute = ['   _____', '  /_____\ ', '  \     /', '   \   /', '    😎', '    /|\ ', '    / \ ',' ^^^^^^^^^']
         
     def break_parachute(self, value):
         if value == False:
@@ -27,6 +27,6 @@ class Parachute:
             print(part)
 
     def parachute_broken(self):
-        if self._parachute == ['    0', '   /|\ ', '   / \ ',' ^^^^^^^^']:
-            self._parachute[0] = '    x' 
+        if self._parachute == ['    😎', '    /|\ ', '    / \ ',' ^^^^^^^^^']:
+            self._parachute[0] = '    😜' 
             return self._parachute
