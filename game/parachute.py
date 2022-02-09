@@ -15,13 +15,16 @@
 class Parachute:
 
     def __init__(self):
-        pass
+        self._parachute = ['  _____', ' /_____\ ', ' \     /', '  \   /', '    0', '   /|\ ', '   / \ ']
 
     def break_parachute(self, value):
-        pass
+        if value == False:
+            self._parachute = self._parachute.pop(0)
 
     def draw_parachute(self):
-        pass
+        for i in self._parachute:
+            part = i
+            print(part)
 
     def parachute_broken(self):
-        pass
+        return self._parachute == []
