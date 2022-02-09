@@ -71,12 +71,11 @@ class Director:
             self._is_playing = False
             print("You guessed it! Play again soon!")
 
-        else:
-            self._is_playing = True
-
-        if self.losing:
+        elif self.losing:
             self._is_playing = False
             print("Im afraid you lost your parachute! Better luck next time.")
 
         else:
             self._is_playing = True
+
+        
