@@ -39,13 +39,13 @@ class Guess:
         self._guess = []
         for i in range(len(word)):
             self._guess.append('_')
-        self._guessString = ''
+        self._guessString = ' '
         self._index = 0
         self._letter = ''
         
     #Gets the guess, and returns a string that contains all blanks and guessed letters.
     def get_guess(self):
-        self._guessString = ''.join(self._guess)
+        self._guessString = ' '.join(self._guess)
         return self._guessString
 
     #The following function is called for two reasons:
