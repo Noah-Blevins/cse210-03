@@ -41,7 +41,6 @@ class Director:
 
     def __init__(self):
         self._words = Words()
-        # New line below
         self._word = self._words.get_word()
         self._guess = Guess(self._word)
         self._parachute = Parachute()
