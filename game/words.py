@@ -19,6 +19,6 @@ class Words:
         self._word_list = ["power", "laptop", "vehicle", "tophat", "moter", "robot", "soccer", "cheese", "gameboy", "sword", "slasher",
          "flower", "havoc", "seabear", "sponge", "circle", "square", "catfish", "tissue", "words"]
 
-    def get_word(self,):
+    def get_word(self):
         # get_word simply returns a random word from word_list
         return random.choice(self._word_list)
